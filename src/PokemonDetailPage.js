@@ -6,7 +6,6 @@ import { getSinglePokemon } from './services/fetch-utils';
 
 export default function PokemonDetailPage() {
   const [pokemon, setPokemon] = useState({});
-  console.log(pokemon);
   //get the route param using the useParam react router hook
   const params = useParams();
 
@@ -19,6 +18,7 @@ export default function PokemonDetailPage() {
     onLoadFetch();
   }, [params.id]); //we want the id from the url in the dependency array because we want the useEffect callback to get called every time the url changes
 
+  //on click of the pokemon, takes you to official fan site
   function handlePokemonClick() {
     window.open(pokemon.pokedex);
   }

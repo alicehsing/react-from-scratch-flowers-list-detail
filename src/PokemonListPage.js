@@ -9,7 +9,6 @@ export default function PokemonsPage() {
   const [pokemons, setPokemons] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const perPage = 25;
-  console.log(pokemons);
 
   useEffect(() => {
     async function fetch() {
