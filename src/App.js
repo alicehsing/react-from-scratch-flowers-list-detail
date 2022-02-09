@@ -1,7 +1,7 @@
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import FlowerListPage from './FlowerListPage';
-import FlowerDetailPage from './FlowerDetailPage';
+import PokemonListPage from './PokemonListPage';
+import PokemonDetailPage from './PokemonDetailPage';
 
 export default function App() {
   return (
@@ -9,11 +9,11 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <FlowerListPage />
+            <PokemonListPage />
           </Route>
-          <Route exact path="/flowers/:id">
+          <Route exact path="/pokemons/:id">
             {/* this route should point to a particular flower by id and render that specific FlowerDetail page */}
-            <FlowerDetailPage />
+            <PokemonDetailPage />
           </Route>
         </Switch>
   
