@@ -13,8 +13,8 @@ export default function PokemonsPage() {
 
   useEffect(() => {
     async function fetch() {
-      const from = currentPage * perPage - perPage;
-      const to = currentPage * perPage;
+      const from = perPage * (currentPage - 1) + 1;
+      const to = perPage * currentPage;
       const pokemons = await getPokemons(from, to);
 
       setPokemons(pokemons);
