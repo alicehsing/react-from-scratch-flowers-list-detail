@@ -5,16 +5,16 @@ export async function getPokemons(from = 0, to = 25) {
     .from('pokemon')
     .select()
     .range(from, to);
-  console.log(response);
+  
   return checkError(response);
 }
 
-// export async function getSingleFlower(id) {
-//   const response = await client
-//     .from('flowers')
-//     .select()
-//     .match({ id })
-//     .single();
-//   console.log(response);
-//   return checkError(response);
-// }
+export async function getSinglePokemon(id) {
+  const response = await client
+    .from('pokemon')
+    .select()
+    .match({ id })
+    .single();
+  console.log(response);
+  return checkError(response);
+}

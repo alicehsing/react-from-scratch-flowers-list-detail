@@ -77,3 +77,16 @@ h3 {
   color: black;
   text-decoration: none;
 }
+
+.pokemon-detail {
+  margin: 20px auto;
+  width: 650px;
+  height: 650px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.pokemon-detail img{
+  width: 300px;
+  height: 300px;
+}
